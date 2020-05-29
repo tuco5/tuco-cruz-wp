@@ -1,0 +1,116 @@
+@keyframes moveInLeft {
+	0% {
+		opacity: 0;
+		transform:translateX(-10rem);
+	}
+
+	80% {
+		transform: translateX(1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+@keyframes moveInRight{
+	0% {
+		opacity: 0;
+		transform:translateX(10rem);
+	}
+
+	80% {
+		transform: translateX(-1rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform:translateY(3rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+@keyframes moveInTop {
+	0% {
+		opacity: 0;
+		transform:translateY(-3rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.04);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes popIn {
+	0% {
+		opacity: 0;
+		transform: scale(.1);
+	}
+
+	85% {
+		transform: scale(1.4);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes bookMoveIn {
+	0% {
+		opacity: 0;
+		transform:translateX(-100rem);
+	}
+
+	80% {
+		transform: translateX(4rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes featureMoveInBottom {
+	0% {
+		opacity: 0;
+		transform:translateY(8rem);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

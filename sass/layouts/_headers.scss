@@ -1,0 +1,75 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-black, 0.80),
+        rgba($color-primary, 0.70)),
+        url(../img/hero/hero-small.jpg
+    );
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width:125em) {
+            
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-black, 0.80),
+            rgba($color-primary, 0.70)),
+            url(../img/hero/hero.jpg
+        );
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+    }
+    
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 6rem;
+
+        @include respond(tab-port) {
+            top: 3rem;
+            left: 3.5rem;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+        height: 8rem;
+
+        @include respond(phone) {
+            height: 6rem;
+        }
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: block;
+        width: 85%;
+
+        @include respond(tab-port) {
+            top: 55%;
+        }
+    }
+}

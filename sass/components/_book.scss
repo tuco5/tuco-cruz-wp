@@ -1,0 +1,122 @@
+.book {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    background-image: linear-gradient(105deg,
+        rgba($color-white, .9) 0%, 
+        rgba($color-white, .9) 50%, 
+        transparent 50%),
+        url(../img/tx-16-small.jpg
+    );
+
+    background-size: cover; // its the same if we change cover for 100%
+    background-position: 0% 100%;
+    border-radius: 1.5rem;
+    box-shadow: 2rem 4rem 4rem rgba($color-black, .6);
+    position: relative;
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg,
+            rgba($color-white, .9) 0%, 
+            rgba($color-white, .9) 60%, 
+            transparent 60%),
+            url(../img/tx-16-small.jpg
+        );
+    }
+
+    @include respond(tab-port) {
+        width: 80%;
+        margin: 0 10vw 0 10vw;
+        background-image: linear-gradient(105deg,
+            rgba($color-white, .9) 0%, 
+            rgba($color-white, .9) 65%, 
+            transparent 55%),
+            url(../img/tx-16-small.jpg
+        );
+    }
+
+    @include respond(phone) {
+        width: 98%;
+        margin: 0 1vw 0 1vw;
+    }
+    
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 4rem;
+        }
+
+        @include respond(phone) {
+            padding: 2rem;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        &--1 {
+            font-size: 2rem;
+            color: $color-gray;
+        }
+
+        &--2 {
+            font-size: 2.5rem;
+            background-image: linear-gradient(
+                to right,
+                $color-light-2,
+                $color-dark-2
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color:transparent;
+            transition: all .2s;
+
+            &:hover {
+                transform: scale(1.04);
+            }
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__logo-box {
+        position: absolute;
+        bottom: 2rem;
+        right: 4rem;
+
+        @include respond(phone) {
+            right: 2rem;
+        }
+    }
+
+    &__logo {
+        height: 8rem;
+        display: inline-block;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+    // ANIMATION
+
+    opacity: 0;
+
+    &--animated-left {
+        animation: bookMoveIn 1s ease-out 0s;
+        animation-fill-mode: backwards;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,22 @@
+.whatsapp {
+    position: relative;
+    display: block;
+    width: 6rem;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &__icon {
+        width: 100%;
+        height: auto;
+        transition: all .2s;
+
+        animation: popIn .3s ease-out 2.5s;
+        animation-fill-mode: backwards;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+

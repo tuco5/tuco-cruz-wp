@@ -1,0 +1,121 @@
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 9000;
+    transition: all .3s;
+
+    // hide the pop up until it is triggered
+    opacity: 0;
+    visibility: hidden;
+
+    @supports (-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px)) {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: rgba($color-black, .3);
+    }
+
+
+    &__content {
+        @include absCenter;
+
+        width: 65%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        border-radius: 0.5rem;
+        display: table;
+        overflow: hidden;
+    }
+
+    &__left {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    &__right {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 3rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+
+    &__map {
+        display: block;
+        width: 60rem;
+        height: 45rem;
+        border: none;
+    }
+
+    // FUNCTIONALITY
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-gray;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    // RESPONSIVE DESIGN
+    @include respond(tab-port) {
+    
+        &__content {
+            width: fit-content;
+            display: block;
+        }
+    
+        &__left {
+            display: block;
+            width: 100%;
+        }
+    
+        &__right {
+            width: 100%;
+            padding: 3rem;
+            display: block;
+        }
+    }
+
+    @include respond(phone) {
+        &__map {
+            width: 42rem;
+            height: 31.5rem;
+        }
+    }
+}
+

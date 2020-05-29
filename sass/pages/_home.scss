@@ -1,0 +1,83 @@
+.section-about {
+    background-color: $color-gray-light-1;
+    padding: 25vh 0;
+    margin-top: -20vh;
+    z-index: 1;
+
+    @include respond(tab-port) {
+        padding: 20vh 0;
+    }
+}
+
+.section-benefits {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-2, 0.6),
+        rgba($color-dark-2, 0.6)),
+        url(../img/tx-4-small.jpg
+    );
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -10rem;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width:125em) {
+            
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-black, 0.80),
+            rgba($color-primary, 0.70)),
+            url(../img/tx-4.jpg
+        );
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    }
+}
+
+.section-services {
+    background-color: $color-gray-light-1;
+    padding: 15rem 0;
+    margin-top: -10rem;
+
+    @include respond(tab-port) {
+        padding: 12rem 0 6rem 0;
+    }
+
+    &__note{
+        text-align: center;
+        margin-top: 4rem;
+        font-size: 1.6rem;
+    }
+}
+
+.section-gallery {
+    position: relative;
+    background-color: rgba($color-black, .8);
+    padding-top: 2rem;
+
+    @include respond(tab-port) {
+        height: 65vh;
+        background-color: rgba($color-black, .8);
+        padding-top: 1rem;
+    }
+}
+
+.section-contact {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-light-2, $color-dark-2);
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+

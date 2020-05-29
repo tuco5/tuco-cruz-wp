@@ -1,0 +1,17 @@
+.social-media__box {
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+    width: 7.2rem;
+    z-index: 9999;
+
+    @include respond(tab-port){
+        bottom: 3rem;
+        right: 3rem;
+    }
+
+    @include respond(phone){
+        bottom: 2.5rem;
+        right: 2.5rem;
+    }
+}
