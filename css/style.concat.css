@@ -1,39 +1,3 @@
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 18/05/2020 21:38
-  	*/
-
-@font-face {
-  font-family: "Flaticon";
-  src: url("./font/Flaticon.eot");
-  src: url("./font/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("./font/Flaticon.woff2") format("woff2"),
-       url("./font/Flaticon.woff") format("woff"),
-       url("./font/Flaticon.ttf") format("truetype"),
-       url("./font/Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Flaticon";
-    src: url("./font/Flaticon.svg#Flaticon") format("svg");
-  }
-}
-
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-  font-style: normal;
-  margin-left: 20px;
-}
-
-.flaticon-mexican-republic-map-black-shape:before { content: "\f100"; }
-.flaticon-policy:before { content: "\f101"; }
-.flaticon-check:before { content: "\f102"; }
-.flaticon-detective:before { content: "\f103"; }
-.flaticon-user:before { content: "\f104"; }
 /*
 0 - 600px :     Phone
 600 - 900px:    Tablet portrait
@@ -153,6 +117,51 @@ body {
 ::selection {
   background-color: #FC354C;
   color: #fff; }
+
+/*
+    Flaticon icon font: Flaticon
+    Creation date: 18/05/2020 21:38
+    */
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"), url("./Flaticon.woff2") format("woff2"), url("./Flaticon.woff") format("woff"), url("./Flaticon.ttf") format("truetype"), url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg"); } }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-mexican-republic-map-black-shape:before {
+  content: "\f100"; }
+
+.flaticon-policy:before {
+  content: "\f101"; }
+
+.flaticon-check:before {
+  content: "\f102"; }
+
+.flaticon-detective:before {
+  content: "\f103"; }
+
+.flaticon-user:before {
+  content: "\f104"; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -821,6 +830,7 @@ body {
       transform: scale(1.15); }
 
 .footer {
+  position: relative;
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
@@ -875,6 +885,16 @@ body {
       .footer__link__copyright {
         width: 100%;
         float: none; } }
+  .footer__godaddy-ssl {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    line-height: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all .2s; }
+    .footer__godaddy-ssl:hover {
+      transform: scale(1.05); }
 
 .gallery {
   height: 90%;
@@ -1197,6 +1217,7 @@ body {
       padding-top: 1rem; } }
 
 .section-contact {
+  position: relative;
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #6988dd, #101f48); }
   @media only screen and (max-width: 56.25em) {
