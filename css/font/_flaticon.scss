@@ -3,7 +3,7 @@
     Creation date: 18/05/2020 21:38
     */
 
-    @font-face {
+@font-face {
   font-family: "Flaticon";
   src: url("./Flaticon.eot");
   src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
@@ -22,8 +22,8 @@
   }
 }
 
-    .fi:before{
-        display: inline-block;
+.fi:before{
+  display: inline-block;
   font-family: "Flaticon";
   font-style: normal;
   font-weight: normal;
@@ -35,16 +35,16 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-    }
+}
 
-    .flaticon-mexican-republic-map-black-shape:before { content: "\f100"; }
+.flaticon-mexican-republic-map-black-shape:before { content: "\f100"; }
 .flaticon-policy:before { content: "\f101"; }
 .flaticon-check:before { content: "\f102"; }
 .flaticon-detective:before { content: "\f103"; }
 .flaticon-user:before { content: "\f104"; }
     
-    $font-Flaticon-mexican-republic-map-black-shape: "\f100";
-    $font-Flaticon-policy: "\f101";
-    $font-Flaticon-check: "\f102";
-    $font-Flaticon-detective: "\f103";
-    $font-Flaticon-user: "\f104";
+$font-Flaticon-mexican-republic-map-black-shape: "\f100";
+$font-Flaticon-policy: "\f101";
+$font-Flaticon-check: "\f102";
+$font-Flaticon-detective: "\f103";
+$font-Flaticon-user: "\f104";
