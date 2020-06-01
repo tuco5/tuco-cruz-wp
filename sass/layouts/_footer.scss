@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     background-color: $color-gray-dark-1;
     padding: 10rem 0;
     font-size: 1.4rem;
@@ -78,6 +79,20 @@
                 width: 100%;
                 float: none;
             }
+        }
+    }
+
+    &__godaddy-ssl {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        line-height: 0;
+        border-radius: $border-radius-small;
+        overflow: hidden;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.05);
         }
     }
 }
