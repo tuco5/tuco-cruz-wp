@@ -1,5 +1,9 @@
 node_modules
+
 css/flaticon.css
 css/style.comp.css
 css/style.concat.css
 css/style.prefix.css
+
+*.log
+*.orig
