@@ -84,8 +84,8 @@
 
     &__godaddy-ssl {
         position: absolute;
-        top: 0;
-        left: .5rem;
+        bottom: 0;
+        left: 0;
         line-height: 0;
         border-radius: $border-radius-small;
         overflow: hidden;
@@ -93,6 +93,10 @@
 
         &:hover {
             transform: scale(1.05);
+        }
+
+        @include respond(tab-port) {
+            transform: scale(.6);
         }
     }
 }
