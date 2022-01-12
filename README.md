@@ -1,6 +1,4 @@
-# This is the tuco - cruz landing page.
-
-Landing page for Tuco - Cruz
+# Tuco - Cruz landing page.
 
 This project was build with NPM, SASS.
 
